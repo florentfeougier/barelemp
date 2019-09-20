@@ -1,4 +1,4 @@
-# BareLEMP - LEMP Web server BASH script to install and configure your web stack
+# BareLEMP - LEMP environnement installer and configuration script
 
 ## Usage
 
