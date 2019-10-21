@@ -1,14 +1,14 @@
 <img src="index.png" align="right" />
 
 # BareLEMP [![Deploy a fully configured Nginx web server in minutes](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
-> A curated list of awesome READMEs
+> Nginx web server with PHP-FPM x MariaDB x Redis ready to host your Laravel project 
 
 Elements in beautiful READMEs include, but are not limited to: images, screenshots, GIFs, text formatting, etc.
 
-## Examples
+## I. Hardening server security
 
-- [ai/size-limit](https://github.com/ai/size-limit#readme) - Project logo, clear description, screenshot, step-by-step installing instructions.
-- [aimeos/aimeos-typo3](https://github.com/aimeos/aimeos-typo3#readme) - Project logo. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
+1. [SSH](https://github.com/ai/size-limit#readme) - Disable password use and configure key based authentication, change the default port
+- [Fail2Ban](https://github.com/aimeos/aimeos-typo3#readme) - Project logo. Clear description of what the project does. Demo screenshot. TOC for easy navigation. Easy installation and setup sections with screenshots. Links for further reading.
 - [alichtman/stronghold](https://github.com/alichtman/stronghold#readme) - Project logo. Clear description of what the project does. GIF Demo. TOC for easy navigation. Badges. Links for further reading. Simple install instructions.
 - [amitmerchant1990/electron-markdownify](https://github.com/amitmerchant1990/electron-markdownify#readme) - Project logo. Minimalist description of what it is. GIF demo of the project. Key features. How to install guide. Credits.
 - [anfederico/Clairvoyant](https://github.com/anfederico/Clairvoyant#readme) - Multiple badges. Clean logo. Simple install instructions. Clear overview of the project accompanied by a schematic. GIF demo. Extensive code examples.
