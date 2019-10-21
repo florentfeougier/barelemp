@@ -6,6 +6,8 @@
 # Ask for install, check, update
 #
 
+apt install unzip wget nginx mariadb-server
+apt install python3-certbot-nginx
 
 #
 # Composer
