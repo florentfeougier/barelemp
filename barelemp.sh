@@ -21,7 +21,8 @@ apt -y update
 apt -y install nginx
 
 apt install php7.3
-apt install php-xml php-json php-bcmath php-mbcrypt php-pdo php-mysql php-ctype php-tokenizer
+apt install php-xml php-json php-bcmath php-pdo php-mysql php-ctype php-tokenizer php-mbstring
+# php-mbcrypt is not part of the core packages since PHP7.2, you need to use PECL
 # check openssl php -i | grep -i openssl
 
 # Check if Apache2 is installed
