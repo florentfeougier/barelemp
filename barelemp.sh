@@ -6,32 +6,28 @@
 # Ask for install, check, update
 #
 
-apt install unzip wget nginx mariadb-server
-apt install python3-certbot-nginx
+echo ' Installing dependencies...'
+apt update -y
+apt install -y unzip wget nginx mariadb-server
+apt install -y python3-certbot-nginx
 
-#
-# Composer
-#
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-php -r "unlink('composer-setup.php');"
-
-apt -y update
+echo ' Installing Nginx...'
 apt -y install nginx
 
-apt install php7.3
+echo ' Installing PHP...'
+apt install php
 apt install php-xml php-json php-bcmath php-pdo php-mysql php-ctype php-tokenizer php-mbstring php-curl
 # php-mbcrypt is not part of the core packages since PHP7.2, you need to use PECL
 # check openssl php -i | grep -i openssl
 
+echo ' Disable Apache2...'
 # Check if Apache2 is installed
 systemctl stop apache2
 systemctl disable apache2
 
-CREATE USER 'admin'@'localhost' IDENTIFIED BY '';
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+#CREATE USER 'admin'@'localhost' IDENTIFIED BY '';
+#GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+#FLUSH PRIVILEGES;
 
 
 #
@@ -45,3 +41,12 @@ systemctl start nginx
 
 systemctl stop php7.3-fpm
 systemctl start php7.3-fpm
+
+#
+# Composer
+#
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php -r "unlink('composer-setup.php');"
+
