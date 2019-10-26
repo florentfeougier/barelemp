@@ -50,3 +50,7 @@ php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 
+
+sudo apt-get install certbot python-certbot-nginx 
+sudo certbot --nginx
+sudo certbot renew --dry-run
