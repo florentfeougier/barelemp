@@ -16,7 +16,7 @@ apt -y install nginx
 
 echo ' Installing PHP...'
 apt install php
-apt install php-xml php-json php-bcmath php-pdo php-mysql php-ctype php-tokenizer php-mbstring php-curl
+apt install php-xml php-json php-bcmath php-pdo php-mysql php-ctype php-tokenizer php-mbstring php-curl php-intl
 # php-mbcrypt is not part of the core packages since PHP7.2, you need to use PECL
 # check openssl php -i | grep -i openssl
 
@@ -34,13 +34,13 @@ systemctl disable apache2
 # Start our stack
 #
 
-ln -s /etc/nginx/sites-available/$vblock_fileconf /etc/nginx/sites-enabled/$vblock_fileconf
+#ln -s /etc/nginx/sites-available/$vblock_fileconf /etc/nginx/sites-enabled/$vblock_fileconf
 
-systemctl stop nginx
-systemctl start nginx
+#systemctl stop nginx
+#systemctl start nginx
 
-systemctl stop php7.3-fpm
-systemctl start php7.3-fpm
+#systemctl stop php7.3-fpm
+#systemctl start php7.3-fpm
 
 #
 # Composer
