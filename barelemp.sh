@@ -8,7 +8,7 @@
 
 echo ' Installing dependencies...'
 apt update -y
-apt install -y unzip wget nginx mariadb-server
+apt install -y unzip wget nginx mariadb-server git
 apt install -y python3-certbot-nginx
 
 echo ' Installing Nginx...'
